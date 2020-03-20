@@ -1,0 +1,16 @@
+name: Shell Lint
+
+on:
+  push:
+    paths:
+      - '**.sh'
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - uses: azohra/shell-linter@v0.2.0
+        with:
+          path: "*.sh"
