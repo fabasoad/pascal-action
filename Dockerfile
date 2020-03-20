@@ -1,7 +1,4 @@
-FROM alpine:3.11.3
-
-RUN apk update ;\
-    apk add fp-compiler
+FROM cmplopes/alpine-freepascal:3.0.4
 
 COPY docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
