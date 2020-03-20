@@ -7,5 +7,4 @@ uses
   Classes;
 begin
   WriteLn('Hello World!');
-  ReadLn;
 end.
