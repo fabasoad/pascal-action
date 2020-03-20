@@ -1,6 +1,11 @@
-program HelloWorld;
-uses crt;
-
+program Project1;
+{$mode objfpc}{$H+}
+uses
+  {$IFDEF UNIX}{$IFDEF UseCThreads}
+  cthreads,
+  {$ENDIF}{$ENDIF}
+  Classes;
 begin
-   writeln('Hello, World!');
-end. 
+  WriteLn('Hello World!');
+  ReadLn;
+end.
