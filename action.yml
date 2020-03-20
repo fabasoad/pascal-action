@@ -1,9 +1,9 @@
 ---
 name: 'Run Pascal script'
 description: 'This action runs Pascal script.'
-# branding:
-#   icon: list
-#   color: gray-dark
+branding:
+  icon: terminal
+  color: gray-dark
 inputs:
   path:
     description: 'Path to the script file.'
