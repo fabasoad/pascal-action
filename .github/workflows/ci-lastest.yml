@@ -1,7 +1,10 @@
 ---
 name: CI (latest)
 
-on: push
+on:
+  push:
+    tags:
+      - 'v*.*.*'
 
 jobs:
   functional_tests:
@@ -11,8 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2.1.0
         with:
-          ref: v1.0.1
-      - uses: fabasoad/pascal-action@v1.0.1
+          ref: ${{ github.ref }}
+      - uses: fabasoad/pascal-action@v1.0.2
         id: pascal
         with:
           path: ./HelloWorld.pas

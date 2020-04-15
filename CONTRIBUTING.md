@@ -32,7 +32,6 @@ This repository has issue templates for bug report and feature request. Please u
 ## Use a Consistent Coding Style
 Please follow all the rules from the following documents:
 - [Bash coding style](https://github.com/icy/bash-coding-style) provided by [icy](https://github.com/icy).
-- [Ruby coding style](https://www.w3resource.com/ruby/ruby-style-guide.php) provided by w3resource. 
 
 ## License
 By contributing, you agree that your contributions will be licensed under its MIT License.
