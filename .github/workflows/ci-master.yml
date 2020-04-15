@@ -1,0 +1,19 @@
+---
+name: CI (master)
+
+on: push
+
+jobs:
+  functional_tests:
+    name: Functional tests
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.1.0
+      - uses: ./
+        id: pascal
+        with:
+          path: ./HelloWorld.pas
+      - name: Validate result
+        run: |
+          [[ "Hello World!" == "${{ steps.pascal.outputs.result }}" ]] || exit 1;

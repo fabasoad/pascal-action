@@ -8,9 +8,8 @@ on:
 jobs:
   lint:
     name: Lint
-    runs-on: ubuntu-18.04
+    timeout-minutes: 3
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: azohra/shell-linter@v0.2.0
-        with:
-          path: "*.sh"
+      - uses: actions/checkout@v2.1.0
+      - uses: bewuethr/shellcheck-action@v2.0.2

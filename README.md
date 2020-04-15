@@ -1,13 +1,17 @@
 # Run Pascal script action
-![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/pascal-action?include_prereleases) ![Pascal (latest)](https://github.com/fabasoad/pascal-action/workflows/Pascal%20(latest)/badge.svg) ![Pascal (master)](https://github.com/fabasoad/pascal-action/workflows/Pascal%20(master)/badge.svg) ![YAML Lint](https://github.com/fabasoad/pascal-action/workflows/YAML%20Lint/badge.svg) ![Dockerfile Lint](https://github.com/fabasoad/pascal-action/workflows/Dockerfile%20Lint/badge.svg) ![Shell Lint](https://github.com/fabasoad/pascal-action/workflows/Shell%20Lint/badge.svg)
+![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/pascal-action?include_prereleases) ![CI (latest)](https://github.com/fabasoad/pascal-action/workflows/CI%20(latest)/badge.svg) ![CI (master)](https://github.com/fabasoad/pascal-action/workflows/CI%20(master)/badge.svg) ![YAML Lint](https://github.com/fabasoad/pascal-action/workflows/YAML%20Lint/badge.svg) ![Dockerfile Lint](https://github.com/fabasoad/pascal-action/workflows/Dockerfile%20Lint/badge.svg) ![Shell Lint](https://github.com/fabasoad/pascal-action/workflows/Shell%20Lint/badge.svg)
 
 This action runs Pascal script.
 
 ## Inputs
-1. `path` - _[Required]_ Path to the script file.
+| Name | Required | Description             | Default | Possible values |
+|------|----------|-------------------------|---------|-----------------|
+| path | Yes      | Path to the script file |         | &lt;Path&gt;    |
 
 ## Outputs
-1. `result` - script output.
+| Name   | Required | Description               |
+|--------|----------|---------------------------|
+| result | Yes      | Result of script running. |
 
 ## Example usage
 
