@@ -1,13 +1,13 @@
 ---
-name: CI (master)
+name: CI (main)
 
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   functional_tests:
@@ -15,7 +15,7 @@ jobs:
     timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.1.0
+      - uses: actions/checkout@v2.3.1
       - uses: ./
         id: pascal
         with:

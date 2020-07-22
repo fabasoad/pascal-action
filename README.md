@@ -1,5 +1,5 @@
 # Run Pascal script action
-![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/pascal-action?include_prereleases) ![CI (latest)](https://github.com/fabasoad/pascal-action/workflows/CI%20(latest)/badge.svg) ![CI (master)](https://github.com/fabasoad/pascal-action/workflows/CI%20(master)/badge.svg) ![YAML Lint](https://github.com/fabasoad/pascal-action/workflows/YAML%20Lint/badge.svg) ![Dockerfile Lint](https://github.com/fabasoad/pascal-action/workflows/Dockerfile%20Lint/badge.svg) ![Shell Lint](https://github.com/fabasoad/pascal-action/workflows/Shell%20Lint/badge.svg)
+![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/pascal-action?include_prereleases) ![CI (latest)](https://github.com/fabasoad/pascal-action/workflows/CI%20(latest)/badge.svg) ![CI (main)](https://github.com/fabasoad/pascal-action/workflows/CI%20(main)/badge.svg) ![YAML Lint](https://github.com/fabasoad/pascal-action/workflows/YAML%20Lint/badge.svg) ![Dockerfile Lint](https://github.com/fabasoad/pascal-action/workflows/Dockerfile%20Lint/badge.svg) ![Shell Lint](https://github.com/fabasoad/pascal-action/workflows/Shell%20Lint/badge.svg)
 
 This action runs Pascal script.
 
@@ -37,4 +37,4 @@ jobs:
 ```
 
 ### Result
-![Result](https://raw.githubusercontent.com/fabasoad/pascal-action/master/screenshot.png)
+![Result](https://raw.githubusercontent.com/fabasoad/pascal-action/main/screenshot.png)
