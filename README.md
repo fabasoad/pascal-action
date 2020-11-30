@@ -27,8 +27,8 @@ jobs:
     name: Run Pascal script
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: fabasoad/pascal-action@v1.0.0
+      - uses: actions/checkout@main
+      - uses: fabasoad/pascal-action@main
         id: pascal
         with:
           path: './HelloWorld.pas'
@@ -37,4 +37,8 @@ jobs:
 ```
 
 ### Result
-![Result](https://raw.githubusercontent.com/fabasoad/pascal-action/main/screenshot.png)
+
+```shell
+Run echo "Hello World!"
+Hello World!
+```
