@@ -1,13 +1,12 @@
 ---
-name: CI (main)
+name: Functional tests
 
 on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
+      - 'bugfix/**'
+      - 'feature/**'
 
 jobs:
   functional_tests:

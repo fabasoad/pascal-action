@@ -1,14 +1,17 @@
 # Run Pascal script action
-![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/pascal-action?include_prereleases) ![CI (latest)](https://github.com/fabasoad/pascal-action/workflows/CI%20(latest)/badge.svg) ![CI (main)](https://github.com/fabasoad/pascal-action/workflows/CI%20(main)/badge.svg) ![YAML Lint](https://github.com/fabasoad/pascal-action/workflows/YAML%20Lint/badge.svg) ![Dockerfile Lint](https://github.com/fabasoad/pascal-action/workflows/Dockerfile%20Lint/badge.svg) ![Shell Lint](https://github.com/fabasoad/pascal-action/workflows/Shell%20Lint/badge.svg)
+
+![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/pascal-action?include_prereleases) ![CI (latest)](https://github.com/fabasoad/pascal-action/workflows/CI%20(latest)/badge.svg) ![Functional tests](https://github.com/fabasoad/pascal-action/workflows/Functional%20tests/badge.svg) ![Security tests](https://github.com/fabasoad/pascal-action/workflows/Security%20tests/badge.svg) ![YAML Lint](https://github.com/fabasoad/pascal-action/workflows/YAML%20Lint/badge.svg) ![Dockerfile Lint](https://github.com/fabasoad/pascal-action/workflows/Dockerfile%20Lint/badge.svg) ![Shell Lint](https://github.com/fabasoad/pascal-action/workflows/Shell%20Lint/badge.svg)
 
 This action runs Pascal script.
 
 ## Inputs
-| Name | Required | Description             | Default | Possible values |
-|------|----------|-------------------------|---------|-----------------|
-| path | Yes      | Path to the script file |         | &lt;Path&gt;    |
+
+| Name | Required | Description             | Possible values |
+|------|----------|-------------------------|-----------------|
+| path | Yes      | Path to the script file | _&lt;Path&gt;_  |
 
 ## Outputs
+
 | Name   | Required | Description               |
 |--------|----------|---------------------------|
 | result | Yes      | Result of script running. |
