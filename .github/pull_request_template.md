@@ -13,9 +13,9 @@ Please check if your PR fulfills the following requirements:
 
 ## Pull request type
 
-<!-- Please do not submit updates to dependencies unless it fixes an issue. --> 
+<!-- Please do not submit updates to dependencies unless it fixes an issue. -->
 
-<!-- Please try to limit your pull request to one type, submit multiple pull requests if needed. --> 
+<!-- Please try to limit your pull request to one type, submit multiple pull requests if needed. -->
 
 Please check the type of change your PR introduces:
 
@@ -25,7 +25,7 @@ Please check the type of change your PR introduces:
 - [ ] Refactoring (no functional changes, no api changes)
 - [ ] Build related changes
 - [ ] Documentation content changes
-- [ ] Other (please describe): 
+- [ ] Other (please describe):
 
 ## What is the current behavior?
 <!-- Please describe the current behavior that you are modifying, or link to a relevant issue. -->

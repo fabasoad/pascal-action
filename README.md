@@ -1,3 +1,5 @@
+<!-- markdownlint-disable-file MD013 -->
+
 # Run Pascal script action
 
 ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/pascal-action?include_prereleases) ![CI (latest)](https://github.com/fabasoad/pascal-action/workflows/CI%20(latest)/badge.svg) ![Functional tests](https://github.com/fabasoad/pascal-action/workflows/Functional%20tests/badge.svg) ![Security tests](https://github.com/fabasoad/pascal-action/workflows/Security%20tests/badge.svg) ![Lint](https://github.com/fabasoad/pascal-action/workflows/Lint/badge.svg)

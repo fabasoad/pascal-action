@@ -1,4 +1,8 @@
 {
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "fixAll.eslint": true
+  },
   "cSpell.words": [
     "HADOLINT",
     "appium",
