@@ -12,6 +12,8 @@
     "issuehunt",
     "liberapay",
     "markdownlint",
+    "semver",
+    "simbo",
     "vulns",
     "yamllint"
   ]
