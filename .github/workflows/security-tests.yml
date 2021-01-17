@@ -22,4 +22,4 @@ jobs:
         run: |
           docker build -t ${{ github.repository }}:${{ github.sha }} .
           snyk auth ${{ secrets.SNYK_API_TOKEN }}
-          snyk test --docker ${{ github.repository }}:${{ github.sha }} --file=Dockerfile
+          snyk test --docker ${{ github.repository }}:${{ github.sha }} --file=Dockerfile --exclude-base-image-vulns

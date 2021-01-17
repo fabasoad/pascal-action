@@ -7,6 +7,8 @@
     "ibiqlik",
     "issuehunt",
     "liberapay",
+    "markdownlint",
+    "vulns",
     "yamllint"
   ]
 }
