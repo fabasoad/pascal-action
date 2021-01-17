@@ -1,4 +1,8 @@
 {
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "fixAll.eslint": true
+  },
   "cSpell.words": [
     "HADOLINT",
     "appium",
@@ -7,6 +11,10 @@
     "ibiqlik",
     "issuehunt",
     "liberapay",
+    "markdownlint",
+    "semver",
+    "simbo",
+    "vulns",
     "yamllint"
   ]
 }
