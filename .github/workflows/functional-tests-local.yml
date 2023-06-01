@@ -1,10 +1,11 @@
 ---
-name: CI (latest)
+name: Functional tests (Local)
 
 on: # yamllint disable-line rule:truthy
   push:
-    tags:
-      - "v*.*.*"
+    branches:
+      - "main"
+  pull_request:
 
 jobs:
   functional_tests:
@@ -13,9 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          ref: ${{ github.ref }}
-      - uses: fabasoad/pascal-action@main
+      - uses: ./
         id: pascal
         with:
           path: ./HelloWorld.pas
