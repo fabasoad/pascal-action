@@ -1,18 +1,18 @@
 ---
-name: 'Run Pascal script'
-description: 'This action runs Pascal script.'
+name: "Run Pascal script"
+description: "This action runs Pascal script."
 branding:
   icon: terminal
   color: gray-dark
 inputs:
   path:
-    description: 'Path to the script file.'
+    description: "Path to the script file."
     required: true
 outputs:
   result:
-    description: 'Result of the output'
+    description: "Result of the output"
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
   args:
     - ${{ inputs.path }}
