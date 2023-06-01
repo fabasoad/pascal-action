@@ -2,21 +2,28 @@
 
 # Run Pascal script action
 
-![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/pascal-action?include_prereleases) ![CI (latest)](https://github.com/fabasoad/pascal-action/workflows/CI%20(latest)/badge.svg) ![Functional tests](https://github.com/fabasoad/pascal-action/workflows/Functional%20tests/badge.svg) ![Security tests](https://github.com/fabasoad/pascal-action/workflows/Security%20tests/badge.svg) ![Lint](https://github.com/fabasoad/pascal-action/workflows/Lint/badge.svg)
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
+![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/pascal-action?include_prereleases) ![CI (latest)](<https://github.com/fabasoad/pascal-action/workflows/CI%20(latest)/badge.svg>) ![Functional tests](https://github.com/fabasoad/pascal-action/workflows/Functional%20tests/badge.svg) ![Security tests](https://github.com/fabasoad/pascal-action/workflows/Security%20tests/badge.svg) ![Lint](https://github.com/fabasoad/pascal-action/workflows/Lint/badge.svg)
+![functional-tests](https://github.com/fabasoad/pascal-action/actions/workflows/functional-tests.yml/badge.svg)
+![pre-commit](https://github.com/fabasoad/pascal-action/actions/workflows/pre-commit.yml/badge.svg)
 
 This action runs Pascal script.
 
 ## Inputs
 
+<!-- prettier-ignore-start -->
 | Name | Required | Description             | Possible values |
 |------|----------|-------------------------|-----------------|
 | path | Yes      | Path to the script file | _&lt;Path&gt;_  |
+<!-- prettier-ignore-end -->
 
 ## Outputs
 
+<!-- prettier-ignore-start -->
 | Name   | Required | Description               |
 |--------|----------|---------------------------|
 | result | Yes      | Result of script running. |
+<!-- prettier-ignore-end -->
 
 ## Example usage
 
@@ -36,7 +43,7 @@ jobs:
       - uses: fabasoad/pascal-action@main
         id: pascal
         with:
-          path: './HelloWorld.pas'
+          path: "./HelloWorld.pas"
       - name: Print result
         run: echo "${{ steps.pascal.outputs.result }}"
 ```
