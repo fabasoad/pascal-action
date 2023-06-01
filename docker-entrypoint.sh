@@ -1,4 +1,4 @@
-#!/bin/sh -l
+#!/usr/bin/env bash
 fpc "$1"
 result=$(${1%.*})
-echo ::set-output name=result::"$result"
+echo "result=${result}" >> "$GITHUB_OUTPUT"

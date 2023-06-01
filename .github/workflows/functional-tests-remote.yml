@@ -1,21 +1,19 @@
 ---
-name: Functional tests
+name: Functional tests (Remote)
 
-on:
+on: # yamllint disable-line rule:truthy
   push:
     branches:
-      - main
-      - 'bugfix/**'
-      - 'feature/**'
+      - "main"
 
 jobs:
-  functional_tests:
+  functional-tests:
     name: Functional tests
     timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.4
-      - uses: ./
+      - uses: actions/checkout@v3
+      - uses: fabasoad/pascal-action@main
         id: pascal
         with:
           path: ./HelloWorld.pas

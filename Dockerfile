@@ -1,5 +1,6 @@
-FROM cmplopes/alpine-freepascal:3.0.4
+FROM primeimages/freepascal:3.2.0
 
 COPY docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
-ENTRYPOINT [ "/docker-entrypoint.sh" ]
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
