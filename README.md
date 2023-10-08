@@ -3,7 +3,7 @@
 # Run Pascal script action
 
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
-![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/pascal-action?include_prereleases) ![CI (latest)](<https://github.com/fabasoad/pascal-action/workflows/CI%20(latest)/badge.svg>) ![Functional tests](https://github.com/fabasoad/pascal-action/workflows/Functional%20tests/badge.svg) ![Security tests](https://github.com/fabasoad/pascal-action/workflows/Security%20tests/badge.svg) ![Lint](https://github.com/fabasoad/pascal-action/workflows/Lint/badge.svg)
+![GitHub release](https://img.shields.io/github/v/release/fabasoad/pascal-action?include_prereleases)
 ![functional-tests-local](https://github.com/fabasoad/pascal-action/actions/workflows/functional-tests-local.yml/badge.svg)
 ![functional-tests-remote](https://github.com/fabasoad/pascal-action/actions/workflows/functional-tests-remote.yml/badge.svg)
 ![pre-commit](https://github.com/fabasoad/pascal-action/actions/workflows/pre-commit.yml/badge.svg)
