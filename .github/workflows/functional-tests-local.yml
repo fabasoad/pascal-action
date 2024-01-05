@@ -2,22 +2,27 @@
 name: Functional tests (Local)
 
 on: # yamllint disable-line rule:truthy
+  pull_request: {}
   push:
     branches:
       - "main"
-  pull_request:
+
+defaults:
+  run:
+    shell: sh
 
 jobs:
-  functional_tests:
+  functional-tests:
     name: Functional tests
     timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout ${{ github.repository }}
+        uses: actions/checkout@v4
       - uses: ./
         id: pascal
         with:
           path: ./HelloWorld.pas
       - name: Validate result
         run: |
-          [[ "Hello World!" == "${{ steps.pascal.outputs.result }}" ]] || exit 1;
+          [ "Hello World!" = "${{ steps.pascal.outputs.result }}" ] || exit 1;

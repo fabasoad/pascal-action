@@ -6,17 +6,23 @@ on: # yamllint disable-line rule:truthy
     branches:
       - "main"
 
+defaults:
+  run:
+    shell: sh
+
 jobs:
-  functional-tests:
+  functional-tests-remote:
     name: Functional tests
     timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: fabasoad/pascal-action@main
+      - name: Checkout ${{ github.repository }}
+        uses: actions/checkout@v4
+      - name: Run Pascal script
+        uses: fabasoad/pascal-action@main
         id: pascal
         with:
           path: ./HelloWorld.pas
       - name: Validate result
         run: |
-          [[ "Hello World!" == "${{ steps.pascal.outputs.result }}" ]] || exit 1;
+          [ "Hello World!" = "${{ steps.pascal.outputs.result }}" ] || exit 1;
