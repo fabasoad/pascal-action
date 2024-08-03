@@ -7,45 +7,43 @@ on: # yamllint disable-line rule:truthy
     branches:
       - main
 
-defaults:
-  run:
-    shell: sh
-
 jobs:
-  code-scanning:
-    name: Code scanning
+  build-image:
+    name: Build image
     runs-on: ubuntu-latest
+    outputs:
+      artifact-name: "${{ steps.artifact.outputs.name }}"
     steps:
       - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v4
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
+      - name: Build image
+        id: build-image
+        uses: docker/build-push-action@v6
         with:
-          languages: "javascript"
-      - name: Perform CodeQL Analysis
-        id: codeql-analysis
-        uses: github/codeql-action/analyze@v3
-      - name: Upload to GHAS
+          push: false
+      - name: Save image
+        id: artifact
+        run: |
+          artifact_name="$(date +%s)"
+          archive_path="${RUNNER_TEMP}/${artifact_name}.tar"
+          docker save --output "${archive_path}" "${{ steps.build-image.outputs.digest }}"
+          echo "path=${archive_path}" >> "$GITHUB_OUTPUT"
+          echo "name=${artifact_name}" >> "$GITHUB_OUTPUT"
+      - name: Upload artifact
         if: always()
-        uses: github/codeql-action/upload-sarif@v3
+        uses: actions/upload-artifact@v4
         with:
-          category: "code-scanning"
-          sarif_file: "${{ steps.codeql-analysis.outputs.sarif-output }}"
-  directory-scanning:
-    name: Directory scanning
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout ${{ github.repository }}
-        uses: actions/checkout@v4
-      - name: Scan current project
-        id: scan-directory
-        uses: anchore/scan-action@v3
-        with:
-          by-cve: "true"
-          path: "."
-      - name: Upload to GHAS
-        if: always()
-        uses: github/codeql-action/upload-sarif@v3
-        with:
-          category: "directory-scanning"
-          sarif_file: "${{ steps.scan-directory.outputs.sarif }}"
+          name: "${{ steps.artifact.outputs.name }}"
+          path: "${{ steps.artifact.outputs.path }}"
+          retention-days: "1"
+          compression-level: "0"
+  sast:
+    name: SAST
+    needs: ["build-image"]
+    permissions:
+      contents: read
+      security-events: write
+    uses: fabasoad/reusable-workflows/.github/workflows/wf-security-sast.yml@main
+    with:
+      image: true
+      image-artifact-name: "${{ needs.build-image.outputs.artifact-name }}"
