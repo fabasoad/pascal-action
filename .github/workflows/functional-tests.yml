@@ -19,8 +19,8 @@ defaults:
     shell: sh
 
 jobs:
-  functional-tests:
-    name: Functional tests
+  run-script:
+    name: Run script
     timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
