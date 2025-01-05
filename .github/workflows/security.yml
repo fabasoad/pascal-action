@@ -45,5 +45,7 @@ jobs:
       security-events: write
     uses: fabasoad/reusable-workflows/.github/workflows/wf-security-sast.yml@main
     with:
+      code-scanning: true
       image: true
       image-artifact-name: "${{ needs.build-image.outputs.artifact-name }}"
+      sca: true
