@@ -4,20 +4,24 @@
 
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
 ![GitHub release](https://img.shields.io/github/v/release/fabasoad/pascal-action?include_prereleases)
-![functional-tests-local](https://github.com/fabasoad/pascal-action/actions/workflows/functional-tests-local.yml/badge.svg)
-![functional-tests-remote](https://github.com/fabasoad/pascal-action/actions/workflows/functional-tests-remote.yml/badge.svg)
+![functional-tests](https://github.com/fabasoad/pascal-action/actions/workflows/functional-tests.yml/badge.svg)
 ![security](https://github.com/fabasoad/pascal-action/actions/workflows/security.yml/badge.svg)
 ![linting](https://github.com/fabasoad/pascal-action/actions/workflows/linting.yml/badge.svg)
 
 This action runs Pascal script.
 
+## Prerequisites
+
+None.
+
 ## Inputs
 
-<!-- prettier-ignore-start -->
-| Name | Required | Description             | Possible values |
-|------|----------|-------------------------|-----------------|
-| path | Yes      | Path to the script file | _&lt;Path&gt;_  |
-<!-- prettier-ignore-end -->
+```yaml
+- uses: fabasoad/pascal-action@v1
+  with:
+    # (Required) Path to the script file.
+    path: ./HelloWorld.pas
+```
 
 ## Outputs
 
