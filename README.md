@@ -60,3 +60,7 @@ jobs:
 Run echo "Hello World!"
 Hello World!
 ```
+
+## Contributions
+
+![Alt](https://repobeats.axiom.co/api/embed/c243117fc32fc6c2d68502024a4bb56e0d1f792d.svg "Repobeats analytics image")
