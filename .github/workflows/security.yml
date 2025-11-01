@@ -53,7 +53,7 @@ jobs:
       security-events: write
     uses: fabasoad/reusable-workflows/.github/workflows/wf-security-sast.yml@main
     with:
-      code-scanning: ${{ (inputs.security-type || 'all') == 'all' || inputs.security-type == 'code-scanning' }}
-      image: ${{ (inputs.security-type || 'all') == 'all' || inputs.security-type == 'image' }}
+      code-scanning: ${{ (github.event.inputs.security-type || 'all') == 'all' || github.event.inputs.security-type == 'code-scanning' }}
+      image: ${{ (github.event.inputs.security-type || 'all') == 'all' || github.event.inputs.security-type == 'image' }}
       image-artifact-name: "${{ needs.build-image.outputs.artifact-name }}"
-      sca: ${{ (inputs.security-type || 'all') == 'all' || inputs.security-type == 'sca' }}
+      sca: ${{ (github.event.inputs.security-type || 'all') == 'all' || github.event.inputs.security-type == 'sca' }}

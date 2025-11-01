@@ -45,8 +45,8 @@ jobs:
     name: Run Pascal script
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@main
-      - uses: fabasoad/pascal-action@main
+      - uses: actions/checkout@v5
+      - uses: fabasoad/pascal-action@v1
         id: pascal
         with:
           path: "./HelloWorld.pas"
