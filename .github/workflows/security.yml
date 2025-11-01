@@ -39,7 +39,7 @@ jobs:
           echo "name=${artifact_name}" >> "$GITHUB_OUTPUT"
       - name: Upload artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: "${{ steps.artifact.outputs.name }}"
           path: "${{ steps.artifact.outputs.path }}"
