@@ -18,6 +18,7 @@ on: # yamllint disable-line rule:truthy
 jobs:
   build-image:
     name: Build image
+    if: contains(fromJSON('["all", "image"]'), github.event.inputs.security-type || 'all')
     runs-on: ubuntu-latest
     outputs:
       artifact-name: "${{ steps.artifact.outputs.name }}"
@@ -53,7 +54,7 @@ jobs:
       security-events: write
     uses: fabasoad/reusable-workflows/.github/workflows/wf-security-sast.yml@main
     with:
-      code-scanning: ${{ (github.event.inputs.security-type || 'all') == 'all' || github.event.inputs.security-type == 'code-scanning' }}
-      image: ${{ (github.event.inputs.security-type || 'all') == 'all' || github.event.inputs.security-type == 'image' }}
+      code-scanning: ${{ contains(fromJSON('["all", "code-scanning"]'), github.event.inputs.security-type || 'all') }}
+      image: ${{ contains(fromJSON('["all", "image"]'), github.event.inputs.security-type || 'all') }}
       image-artifact-name: "${{ needs.build-image.outputs.artifact-name }}"
-      sca: ${{ (github.event.inputs.security-type || 'all') == 'all' || github.event.inputs.security-type == 'sca' }}
+      sca: ${{ contains(fromJSON('["all", "sca"]'), github.event.inputs.security-type || 'all') }}
