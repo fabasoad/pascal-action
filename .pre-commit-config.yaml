@@ -34,7 +34,7 @@ repos:
         stages: ["pre-push"]
   # Dockerfile
   - repo: https://github.com/hadolint/hadolint
-    rev: v2.15.0
+    rev: v2.15.1
     hooks:
       - id: hadolint
         stages: ["pre-push"]
